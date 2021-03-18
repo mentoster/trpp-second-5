@@ -1,10 +1,10 @@
-package ru.mirea.trpp_second_5.controllers;
+package ru.mirea.trpp.controllers;
 
 import com.opencsv.bean.CsvToBeanBuilder;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
-import ru.mirea.trpp_second_5.entity.Medicine;
+import ru.mirea.trpp.entity.Medicine;
 
 import java.io.InputStreamReader;
 import java.util.List;
@@ -19,11 +19,14 @@ public class MedicineController {
 
     /** Конструктор. */
     public MedicineController() {
-        medicineList = new CsvToBeanBuilder<Medicine>(new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"))).withType(Medicine.class).build().parse();
+        medicineList = new CsvToBeanBuilder<Medicine>(
+                new InputStreamReader(this.getClass().getResourceAsStream("/MOCK_DATA.csv"))).withType(Medicine.class)
+                        .build().parse();
     }
 
     /**
      * Получить список медикаментов.
+     *
      * @return список медикаментов
      */
     @Get()
@@ -33,6 +36,7 @@ public class MedicineController {
 
     /**
      * Найти медикаменты по идентификатору.
+     *
      * @param id идентификатор медикаментов
      * @return Медикаменты, если есть, иначе 404 ошибка
      */
