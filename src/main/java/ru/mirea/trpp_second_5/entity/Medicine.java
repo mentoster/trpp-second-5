@@ -33,5 +33,8 @@ public class Medicine {
     @CsvBindByName(column = "fda_code")
     private String fdaCode;
 
+    public Long getId() {
+        return id;
+    }
 
 }
