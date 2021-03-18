@@ -7,6 +7,7 @@ public class Application {
 
     /**
      * Точка входа.
+     *
      * @param args аргументы
      */
     public static void main(String[] args) {

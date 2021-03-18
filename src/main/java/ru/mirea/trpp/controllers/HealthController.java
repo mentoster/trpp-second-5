@@ -11,8 +11,8 @@ public class HealthController {
 
     /**
      * Проверить состояние сервера.
-     * @return ответ
-     * 200 - OK
+     *
+     * @return ответ 200 - OK
      */
     @Get
     public HttpResponse<HealthResponse> healthCheck() {
