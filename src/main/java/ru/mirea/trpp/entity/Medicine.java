@@ -33,7 +33,7 @@ public class Medicine {
     @CsvBindByName(column = "fda_code")
     private String fdaCode;
 
-    /** Метод get для id */
+    /** Метод get для id. */
     public Long getId() {
         return id;
     }
